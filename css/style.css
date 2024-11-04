@@ -44,9 +44,9 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol {
 .col-12 {
     width: calc(100% - var(--gutter));
 }
-@media screen and (max-width: 992px);{
+@media screen and (max-width: 992px) {
     .container {
-        max-widht: 100%;
+        max-width: 100%;
     }
     .col-lg-3 {
         width: calc(25% - var(--gutter));
@@ -61,7 +61,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol {
         width: calc(100% - var(--gutter));
     }
 }
-@media screen and (max-width: 768px);{
+@media screen and (max-width: 768px) {
     .col-md-3 {
         width: calc(25% - var(--gutter));
     }
@@ -77,7 +77,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol {
 
 }
 
-@media screen and (max-width: 576px);{
+@media screen and (max-width: 576px) {
     .col-sm-3 {
         width: calc(25% - var(--gutter));
     }
