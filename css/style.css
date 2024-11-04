@@ -1,0 +1,51 @@
+:root {
+    --gutter: 15px;
+    --bg: rgb(114, 71, 255);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: var(--bg);
+}
+.container {
+    background-color: aquamarine;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row div {
+    padding: 15px;
+    margin: 0 auto;
+    background-color: azure;
+    border: 1px solid gray;
+}
+.col-3 {
+    width: calc(25% - var(--gutter));
+}
+.col-4 {
+    width: calc(33.33% - var(--gutter));
+}
+.col-6 {
+    width: calc(50% - var(--gutter));
+}
+.col-12 {
+    width: calc(100% - var(--gutter));
+}
+@media screen and (max-width: 992px);{
+    .container {
+        max-widht: 100%;
+    }
+}
