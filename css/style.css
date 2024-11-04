@@ -1,6 +1,6 @@
 :root {
     --gutter: 15px;
-    --bg: rgb(114, 71, 255);
+    --bg: rgb(8,37,103);
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -13,11 +13,21 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol {
     margin: 0;
     padding: 0;
 }
+h1, h2, h3 {
+    text-align: center;
+    color: rgb(65,105,225);
+    font-size: 50px;
+}
+p {
+    text-align: left;
+    color: rgb(120,81,169);
+    font-size: 30px;
+}
 .header {
     background-color: var(--bg);
 }
 .container {
-    background-color: aquamarine;
+    background-color: rgb(228,113,122);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
