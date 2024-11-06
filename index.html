@@ -17,7 +17,94 @@
                 <div class="col-6">2</div>
                 <div class="col-6">3</div>
                 <div class="col-3 col-lg-6 col-md-6 col-sm-12">4
+                    <div id="calculator">
+                        <input type="text" id="display" readonly>
                     
+                        <div>
+                          <button onclick="appendNumber('7')">7</button>
+                          <button onclick="appendNumber('8')">8</button>
+                          <button onclick="appendNumber('9')">9</button>
+                          <button onclick="appendOperator('/')">/</button>
+                        </div>
+                    
+                        <div>
+                          <button onclick="appendNumber('4')">4</button>
+                          <button onclick="appendNumber('5')">5</button>
+                          <button onclick="appendNumber('6')">6</button>
+                          <button onclick="appendOperator('*')">*</button>
+                        </div>
+                    
+                        <div>
+                          <button onclick="appendNumber('1')">1</button>
+                          <button onclick="appendNumber('2')">2</button>
+                          <button onclick="appendNumber('3')">3</button>
+                          <button onclick="appendOperator('-')">-</button>
+                        </div>
+                    
+                        <div>
+                          <button onclick="appendNumber('0')">0</button>
+                          <button onclick="appendNumber('.')">.</button>
+                          <button onclick="calculate()">=</button>
+                          <button onclick="appendOperator('+')">+</button>
+                        </div>
+                    
+                        <button onclick="clearDisplay()">C</button>
+                      </div>
+                    
+                      <script>
+                        let display = document.getElementById("display");
+                        let currentInput = "";
+                        let operator = null;
+                        let previousOperand = null;
+                    
+                        function appendNumber(number) {
+                          currentInput += number;
+                          display.value = currentInput;
+                        }
+                    
+                        function appendOperator(op) {
+                          if (currentInput !== "") {
+                            previousOperand = parseFloat(currentInput);
+                            operator = op;
+                            currentInput = "";
+                          }
+                        }
+                    
+                        function calculate() {
+                          if (operator !== null && currentInput !== "") {
+                            let currentOperand = parseFloat(currentInput);
+                            switch (operator) {
+                              case "+":
+                                currentInput = previousOperand + currentOperand;
+                                break;
+                              case "-":
+                                currentInput = previousOperand - currentOperand;
+                                break;
+                              case "*":
+                                currentInput = previousOperand * currentOperand;
+                                break;
+                              case "/":
+                                if (currentOperand === 0) {
+                                  alert("Деление на ноль!");
+                                  currentInput = "";
+                                  return;
+                                }
+                                currentInput = previousOperand / currentOperand;
+                                break;
+                            }
+                            operator = null;
+                            previousOperand = null;
+                            display.value = currentInput;
+                          }
+                        }
+                    
+                        function clearDisplay() {
+                          currentInput = "";
+                          operator = null;
+                          previousOperand = null;
+                          display.value = "";
+                        }
+                      </script>
                 </div>
                 <div class="col-3 col-lg-6 col-md-6 col-sm-12">5</div> 
                 <div class="col-3 col-lg-6 col-md-6 col-sm-12">6</div> 
