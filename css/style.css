@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-size: 18px;
 }
-body, p, h1, h2, h3, h4, h5, h6, ul, ol {
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, footer {
     margin: 0;
     padding: 0;
 }
@@ -101,19 +101,25 @@ p {
         width: calc(100% - var(--gutter));
     }
 }
+
 footer {
-    background-color: #b8a6e9;
-    text-align: center;
-    padding: 1rem;
-    position: fixed; /* Делаем футер статичным */
-    bottom: 0; /* Закрепляем футер внизу */
-    left: 0; /* Расширяем футер на всю ширину */
-    width: 100%; /* Расширяем футер на всю ширину */
-   }
+    /* Стили из секции container */
+    background-color: rgb(228,113,122); /* Розовый фон */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 15px; /* Отступы */
    
-   /* Дополнительные стили (чтобы текст не перекрывался футером) */
+    /* Фиксированный футер */
+    position: fixed; 
+    bottom: -60px;
+    /*С помощью left: 50% футер выравнивается по центру по горизонтали, но его левая граница находится в середине экрана.
+    - С помощью transform: translateX(-50%) футер сдвигается влево на половину своей ширины, что компенсирует смещение, вызванное left: 50%, и футер оказывается в центре страницы. */
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: calc(100% - var(--gutter)); 
+   }
    main {
-    padding-bottom: 60px; /* Добавляем отступ для футера */
-   }
-   
+    padding-bottom: 60px; /*  Добавляем отступ для футера  */
+  }
+     
 
