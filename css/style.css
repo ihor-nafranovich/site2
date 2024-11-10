@@ -119,7 +119,7 @@ footer {
     width: calc(100% - var(--gutter)); 
    }
    main {
-    padding-bottom: 60px; /*  Добавляем отступ для футера  */
+    padding-bottom: 103px; /*  Добавляем отступ для футера  */
   }
      
 
