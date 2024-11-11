@@ -32,6 +32,23 @@ p {
     margin: 0 auto;
     padding: 0 15px;
 }
+.container2 {
+    background-color: rgb(46, 205, 125);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.image {
+    float: left; /* Обтекание слева */
+    margin-right: 20px; /* Отступ от текста */
+    border-radius: 10px;
+  }
+
+.text {
+    /* Дополнительные стили для текста, например: */
+    font-size: 16px;
+    line-height: 1.5;
+  }
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +58,7 @@ p {
     margin: 0 auto;
     background-color: rgb(245,255,250);
     border: 1px solid rgb(72,6,7);
+    border-radius: 10px;
 }
 .col-3 {
     width: calc(25% - var(--gutter));
@@ -101,6 +119,43 @@ p {
         width: calc(100% - var(--gutter));
     }
 }
+
+nav {
+    background-color: #f0f0f0;
+    max-width: 1200PX; 
+    padding: 10px;
+    text-align: center;
+  }
+  nav button {
+    background-color: #4CAF50;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+
 
 footer {
     /* Стили из секции container */
