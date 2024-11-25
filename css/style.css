@@ -99,7 +99,9 @@ nav button:hover {
   background-color: aqua;
 }   
 .container2 {
-    background-color: rgb(46, 205, 125);
+  display: flex;  
+  background-color: rgb(46, 205, 125);
+  text-align: center;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 15px;
