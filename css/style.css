@@ -32,6 +32,72 @@ p {
     margin: 0 auto;
     padding: 0 15px;
 }
+.container1 {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px; 
+   }
+   .item {
+    background-color: lightblue;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+    transition: transform 0.3s ease;
+  }
+.item:hover {
+      transform: scale(1.1);
+  }
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, footer {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  text-align: center;
+  color: rgb(65,105,225);
+  font-size: 40px;
+}
+p {
+  text-align: left;
+  color: rgb(120,81,169);
+  font-size: 20px;
+}
+.button button {
+  background-color: #e2c545;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+}
+.button button:hover {
+  background-color: #3e8e41;
+}
+nav button {
+  background-color: #ea5172;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+nav button:hover {
+  background-color: aqua;
+}   
 .container2 {
     background-color: rgb(46, 205, 125);
     max-width: 100%;
@@ -157,24 +223,31 @@ nav {
   }
 
 
-footer {
-    /* Стили из секции container */
-    background-color: rgb(228,113,122); /* Розовый фон */
-    max-width: 1200px; /* Максимальная ширина */
-    margin: 0 auto; /* Центрирование */
-    padding: 0 15px; /* Отступы */
-   
-    /* Фиксированный футер */
-    position: fixed; 
-    bottom: -65px;
-    /*С помощью left: 50% футер выравнивается по центру по горизонтали, но его левая граница находится в середине экрана.
-    - С помощью transform: translateX(-50%) футер сдвигается влево на половину своей ширины, что компенсирует смещение, вызванное left: 50%, и футер оказывается в центре страницы. */
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: calc(100% - var(--gutter)); 
-   }
-   main {
-    padding-bottom: 105px; /*  Добавляем отступ для футера  */
+  footer {
+	background-color: #4edd7e;
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+	position: fixed; /* Делает футер фиксированным */
+	left: 50%; /* Позиционирование футера по центру по горизонтали */
+	transform: translateX(-50%); /* Сдвиг футера влево на половину его ширины, чтобы центрировать */
+	bottom: 0;  /*  Футер прикреплен к нижнему краю */
+	width: 100%; /* Футер занимает всю ширину экрана */
+	z-index: 100;
   }
+footer nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  } 
+footer nav li {
+	display: inline-block;
+	margin: 0 10px;
+  }  
+footer .social-media {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
      
 
